@@ -1,0 +1,30 @@
+{
+  "_comment": "Hand-calculated expected results for data/input/*.csv. Kept separate from the inputs on purpose.",
+  "customers": {
+    "input": 12, "accepted": 6, "rejected": 6, "published": 6,
+    "published_ids": ["C001", "C002", "C003", "C004", "C005", "C010"],
+    "rejects_by_source_row": {
+      "7": "duplicate_customer_id", "8": "null_primary_key", "9": "missing_customer_name",
+      "10": "invalid_email", "11": "invalid_timestamp", "12": "malformed_row"
+    }
+  },
+  "orders": {
+    "input": 19, "accepted": 8, "rejected": 11, "published": 8,
+    "published_ids": ["O1001", "O1002", "O1003", "O1004", "O1005", "O1006", "O1007", "O1018"],
+    "published_amount_cents": 51576,
+    "rejects_by_source_row": {
+      "9": "invalid_amount", "10": "invalid_amount", "11": "invalid_amount",
+      "12": "invalid_timestamp", "13": "invalid_status", "14": "unknown_customer_id",
+      "15": "unknown_customer_id", "16": "null_primary_key", "17": "null_customer_id",
+      "18": "duplicate_order_id", "19": "malformed_row"
+    }
+  },
+  "daily_sales_utc": [
+    ["2026-01-15", 2, 15050], ["2026-01-16", 1, 7525],
+    ["2026-01-17", 2, 2001],  ["2026-01-18", 1, 4000]
+  ],
+  "daily_sales_new_york": [
+    ["2026-01-15", 2, 15050], ["2026-01-16", 3, 9526], ["2026-01-18", 1, 4000]
+  ],
+  "total_sales_cents": 28576
+}

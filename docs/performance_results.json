@@ -1,0 +1,267 @@
+{
+  "environment": {
+    "python_version": "3.14.3",
+    "platform": "win32",
+    "note": "Single run per size; timings are observational, not a production capacity guarantee."
+  },
+  "results": [
+    {
+      "customers": 100,
+      "orders": 500,
+      "status": "success",
+      "customers_published": 100,
+      "orders_published": 500,
+      "customers_rejected": 0,
+      "orders_rejected": 0,
+      "pipeline_duration_seconds": 0.3175,
+      "wall_clock_seconds": 1.7789,
+      "reconciliation": [
+        {
+          "check": "customers: input = accepted + rejected",
+          "expected": 100,
+          "actual": 100,
+          "passed": true
+        },
+        {
+          "check": "customers: accepted = published + skipped_existing",
+          "expected": 100,
+          "actual": 100,
+          "passed": true
+        },
+        {
+          "check": "customers: curated rowcount = before + published",
+          "expected": 100,
+          "actual": 100,
+          "passed": true
+        },
+        {
+          "check": "orders: input = accepted + rejected",
+          "expected": 500,
+          "actual": 500,
+          "passed": true
+        },
+        {
+          "check": "orders: accepted = published + skipped_existing",
+          "expected": 500,
+          "actual": 500,
+          "passed": true
+        },
+        {
+          "check": "orders: curated rowcount = before + published",
+          "expected": 500,
+          "actual": 500,
+          "passed": true
+        },
+        {
+          "check": "orders: accepted amount = published + skipped_existing amount (cents)",
+          "expected": 25049799,
+          "actual": 25049799,
+          "passed": true
+        },
+        {
+          "check": "customers: no null/duplicate customer_id",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "check": "orders: no null/duplicate order_id",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "check": "orders: every order references a curated customer",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "check": "daily_sales: order_count = eligible curated orders",
+          "expected": 500,
+          "actual": 500,
+          "passed": true
+        },
+        {
+          "check": "daily_sales: total_sales_cents = eligible curated order cents",
+          "expected": 25049799,
+          "actual": 25049799,
+          "passed": true
+        }
+      ],
+      "return_code": 0
+    },
+    {
+      "customers": 1000,
+      "orders": 5000,
+      "status": "success",
+      "customers_published": 1000,
+      "orders_published": 5000,
+      "customers_rejected": 0,
+      "orders_rejected": 0,
+      "pipeline_duration_seconds": 0.467,
+      "wall_clock_seconds": 1.8513,
+      "reconciliation": [
+        {
+          "check": "customers: input = accepted + rejected",
+          "expected": 1000,
+          "actual": 1000,
+          "passed": true
+        },
+        {
+          "check": "customers: accepted = published + skipped_existing",
+          "expected": 1000,
+          "actual": 1000,
+          "passed": true
+        },
+        {
+          "check": "customers: curated rowcount = before + published",
+          "expected": 1000,
+          "actual": 1000,
+          "passed": true
+        },
+        {
+          "check": "orders: input = accepted + rejected",
+          "expected": 5000,
+          "actual": 5000,
+          "passed": true
+        },
+        {
+          "check": "orders: accepted = published + skipped_existing",
+          "expected": 5000,
+          "actual": 5000,
+          "passed": true
+        },
+        {
+          "check": "orders: curated rowcount = before + published",
+          "expected": 5000,
+          "actual": 5000,
+          "passed": true
+        },
+        {
+          "check": "orders: accepted amount = published + skipped_existing amount (cents)",
+          "expected": 255737628,
+          "actual": 255737628,
+          "passed": true
+        },
+        {
+          "check": "customers: no null/duplicate customer_id",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "check": "orders: no null/duplicate order_id",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "check": "orders: every order references a curated customer",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "check": "daily_sales: order_count = eligible curated orders",
+          "expected": 5000,
+          "actual": 5000,
+          "passed": true
+        },
+        {
+          "check": "daily_sales: total_sales_cents = eligible curated order cents",
+          "expected": 255737628,
+          "actual": 255737628,
+          "passed": true
+        }
+      ],
+      "return_code": 0
+    },
+    {
+      "customers": 5000,
+      "orders": 25000,
+      "status": "success",
+      "customers_published": 5000,
+      "orders_published": 25000,
+      "customers_rejected": 0,
+      "orders_rejected": 0,
+      "pipeline_duration_seconds": 0.8256,
+      "wall_clock_seconds": 2.0711,
+      "reconciliation": [
+        {
+          "check": "customers: input = accepted + rejected",
+          "expected": 5000,
+          "actual": 5000,
+          "passed": true
+        },
+        {
+          "check": "customers: accepted = published + skipped_existing",
+          "expected": 5000,
+          "actual": 5000,
+          "passed": true
+        },
+        {
+          "check": "customers: curated rowcount = before + published",
+          "expected": 5000,
+          "actual": 5000,
+          "passed": true
+        },
+        {
+          "check": "orders: input = accepted + rejected",
+          "expected": 25000,
+          "actual": 25000,
+          "passed": true
+        },
+        {
+          "check": "orders: accepted = published + skipped_existing",
+          "expected": 25000,
+          "actual": 25000,
+          "passed": true
+        },
+        {
+          "check": "orders: curated rowcount = before + published",
+          "expected": 25000,
+          "actual": 25000,
+          "passed": true
+        },
+        {
+          "check": "orders: accepted amount = published + skipped_existing amount (cents)",
+          "expected": 1254048845,
+          "actual": 1254048845,
+          "passed": true
+        },
+        {
+          "check": "customers: no null/duplicate customer_id",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "check": "orders: no null/duplicate order_id",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "check": "orders: every order references a curated customer",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "check": "daily_sales: order_count = eligible curated orders",
+          "expected": 25000,
+          "actual": 25000,
+          "passed": true
+        },
+        {
+          "check": "daily_sales: total_sales_cents = eligible curated order cents",
+          "expected": 1254048845,
+          "actual": 1254048845,
+          "passed": true
+        }
+      ],
+      "return_code": 0
+    }
+  ]
+}

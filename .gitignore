@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+# generated artefacts - never commit databases or run outputs
+*.db
+*.sqlite
+data/output/*
+!data/output/.gitkeep
+data/generated/

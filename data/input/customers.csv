@@ -1,0 +1,13 @@
+customer_id,customer_name,email,created_at
+C001,Asha Rao,asha.rao@example.com,2026-01-05T09:30:00Z
+C002,Ben Carter,ben.carter@example.com,2026-01-06T14:00:00+00:00
+C003,Chitra Iyer,,2026-01-07T08:15:00
+C004,Dev Patel,dev.patel@example.com,2026-01-08
+C005,Elena Rossi,elena.rossi@example.com,2026-01-09T10:00:00Z
+C003,Chitra I. (dup),chitra.dup@example.com,2026-02-01T00:00:00Z
+,Ghost Customer,ghost@example.com,2026-01-10T00:00:00Z
+C006,,no.name@example.com,2026-01-11T00:00:00Z
+C007,Farid Khan,not-an-email,2026-01-12T00:00:00Z
+C008,Gita Menon,gita.menon@example.com,not-a-date
+C009,Malformed Row,extra@example.com,2026-01-13T00:00:00Z,unexpected_extra_field
+C010,Hari Om,hari.om@example.com,2026-01-14T00:00:00Z
